@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="main.css" />
+    <title>Agenda de contatos</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+    href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap"
+    rel="stylesheet"
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img src="./imgs/download (1).png" alt=" imagem Agenda-de-contatos" />
+        <h1>Agenda de Contatos</h1>
+      </header>
+
+      <form id="form-contatos">
+        <label for="nome do contato"><strong>Nome</strong></label>
+        <input
+          type="text"
+          id="nome-contato"
+          required
+          placeholder="EX: LUIZ HENRIQUE"
+        />
+        <label for="numeroDeContato"><strong>Telefone</strong></label>
+        <input
+          input
+          type="tel"
+          id="numero-contato"
+          name="phone"
+          required
+          pattern="[0-9]{2} [0-9]{5}-[0-9]{4}"
+          placeholder="Ex: DDD  00000 - 0000"
+        />
+        <button
+          type="submit"
+          onclick="contaLinhasTabela('tabela');"
+          value="Contar Linhas"
+        >
+          Cadastrar
+        </button>
+      </form>
+
+      <table cellspacing="0">
+        <thead>
+          <tr>
+            <th>Nome do contato</th>
+            <th></th>
+            <th>Telefone do contato</th>
+          </tr>
+        </thead>
+        <tbody id="tabela">
+          <tr id="tr">
+            <td></td>
+            <td></td>
+            <td></td>
+          </tr>
+        </tbody>
+        <!--  
+          <tfoot>
+                  <tr>
+                    <td><strong>Total de contatos</strong></td>
+                    <td></td>
+                    <td id="linhaFinal"></td>
+                  </tr>
+          </tfoot>
+        -->
+      </table>
+    </div>
+    <script src="./main.js"></script>
+  </body>
+</html>
