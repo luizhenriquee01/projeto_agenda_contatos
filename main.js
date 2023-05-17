@@ -30,22 +30,8 @@ function atualizaTabela() {
   const corpoTabela = document.querySelector('tbody');
   corpoTabela.innerHTML = linhas;
 }
-/*
-function contaLinhasTabela(id) {
-  var tabela = document.getElementById(id);
-  var linhas = tabela.getElementsByTagName('tr');
-
-
-  let somaDasLinhas = 0;
-
-  for (let i = 0; i < linhas.length; i++) {
-    somaDasLinhas += linhas[i];
-  }
-
-  const soma = somaDasLinhas + linhas.length;
-
-  console.log(soma);
-
-  /*document.getElementById('linhaFinal').innerHTML = soma;
+function contaLinhasTabela() {
+  var tabela = document.getElementById('tabela');
+  var linha = tabela.getElementsByTagName('tr').length;
+  document.getElementById('numero-linhas').innerHTML = +linha;
 }
-*/
